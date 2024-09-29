@@ -1,3 +1,3 @@
-export const MainPage = () => {
-  return <div>Главная страница</div>
-}
+export const MainPage:React.FC = () => {
+  return <div>Главная страница</div>;
+};

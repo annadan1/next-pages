@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-fix": "eslint \"**/*.{ts,tsx}\" --fix",
+    "prepare": "husky",
+    "test": "next build && next lint"
   },
   "dependencies": {
+    "husky": "^9.1.6",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
@@ -20,6 +24,8 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.13",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
     "typescript": "^5"
   }
 }
