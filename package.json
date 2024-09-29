@@ -12,6 +12,7 @@
     "test": "next build && next lint"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "husky": "^9.1.6",
     "next": "14.2.13",
     "react": "^18",
@@ -23,9 +24,9 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.13",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-next": "14.2.13",
     "typescript": "^5"
   }
 }
