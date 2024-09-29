@@ -1,0 +1,67 @@
+.header-font {
+  font-weight: 300;
+}
+
+.text-font {
+  font-weight: 400;
+}
+
+.h {
+  &1 {
+    @extend .header-font;
+    font-size: rem(34);
+    line-height: 125%;
+
+    @include min-media("t") {
+      font-size: rem(38);
+    }
+
+    @include min-media("d") {
+      font-size: rem(42);
+    }
+
+    @include min-media("xxl") {
+      font-size: rem(46);
+    }
+  }
+
+  &2 {
+    @extend .header-font;
+    font-size: rem(24);
+    line-height: 125%;
+
+    @include min-media("t") {
+      font-size: rem(28);
+    }
+
+    @include min-media("d") {
+      font-size: rem(32);
+    }
+
+    @include min-media("xxl") {
+      font-size: rem(36);
+    }
+  }
+}
+
+.t {
+  &1 {
+    @extend .text-font;
+    font-size: rem(16);
+    line-height: 160%;
+
+    @include min-media("xxl") {
+      font-size: rem(18);
+    }
+  }
+
+  &2 {
+    @extend .text-font;
+    font-size: rem(12);
+    line-height: 160%;
+
+    @include min-media("xxl") {
+      font-size: rem(14);
+    }
+  }
+}
