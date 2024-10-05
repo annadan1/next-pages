@@ -10,9 +10,8 @@
     "lint": "next lint",
     "lint-fix": "eslint \"**/*.{ts,tsx}\" --fix",
     "prepare": "husky",
-    "export": "next export",
     "test": "next build && next lint",
-    "deploy": "gh-pages -d out"
+    "deploy": "npm run build && gh-pages -d out"
   },
   "dependencies": {
     "classnames": "^2.5.1",
