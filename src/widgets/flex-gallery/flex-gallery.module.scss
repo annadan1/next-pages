@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: rem(20);
+}
+
+.image {
+  width: inherit;
+  height: inherit;
+}
+
+.imageWrapper {
+  position: relative;
+  flex-basis: rem(300);
+  flex-grow: 1;
+  aspect-ratio: 800/600;
+
+  @include min-media('d') {
+    max-width: calc(25% - rem(20));
+  }
+}
+
+.imageName {
+  bottom: 0;
+  position: absolute;
+  color: var(--color-white);
+}

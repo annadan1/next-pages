@@ -1,0 +1,19 @@
+:root {
+  --container-padding: #{rem(10)};
+
+  @include min-media('t') {
+    --container-padding: #{rem(20)};
+  }
+
+  @include min-media('d') {
+    --container-padding: #{rem(40)};
+  }
+
+  @include min-media('xxl') {
+    --container-padding: #{rem(60)};
+  }
+
+  // colors;
+  --color-black: #000;
+  --color-white: #fff;
+}
