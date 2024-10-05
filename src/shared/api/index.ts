@@ -9,7 +9,6 @@ export const api = {
       signal,
     });
     clearTimeout(timer);
-    console.log(res, 'res');
     return res.json();
   },
 };
