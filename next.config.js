@@ -2,6 +2,8 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  basePath: '/next-pages',
+  output: 'export',
   env: {
     MAIN_URL: process.env.MAIN_URL,
     DOMAIN: process.env.DOMAIN,
@@ -22,4 +24,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
