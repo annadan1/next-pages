@@ -2,8 +2,6 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/next-pages',
-  output: 'export',
   env: {
     MAIN_URL: process.env.MAIN_URL,
     DOMAIN: process.env.DOMAIN,
