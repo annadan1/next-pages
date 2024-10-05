@@ -1,4 +1,4 @@
-const baseURL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+const baseURL = process.env.MAIN_URL || 'http://localhost:3000';
 
 export const api = {
   get: async(endpoint: string) => {

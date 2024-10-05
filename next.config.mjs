@@ -2,11 +2,23 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  env: {
+    MAIN_URL: process.env.MAIN_URL,
+    DOMAIN: process.env.DOMAIN,
+  },
   sassOptions: {
     additionalData: `
       @import "src/assets/styles/function.scss";
       @import "src/assets/styles/media.scss";
     `,
+  },
+  images: {
+    remotePatterns: [
+      {
+        hostname: process.env.DOMAIN,
+        pathname: '**',
+      },
+    ],
   },
 };
 
