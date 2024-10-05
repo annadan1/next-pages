@@ -1,22 +1,13 @@
-'use client';
+import { getImages } from '@/shared/api/get-images';
+import { FlexGallery } from '@/widgets/flex-gallery';
 
-import { useEffect, useState } from 'react';
-import { api } from '@/shared/api';
+export const MainPage: React.FC = async() => {
+  const [images] = await Promise.all([getImages()]);
 
-interface ImageData {
-  name: string;
-  url: string;
-}
-
-export const MainPage: React.FC = () => {
-  const [images, setImages] = useState<ImageData[]>([]);
-
-  useEffect(() => {
-    // Получение данных с API
-    api.get('/images')
-      .then((data) => setImages(data))
-      .catch((error) => console.error('Ошибка при загрузке изображений:', error));
-  }, []);
-
-  return <div>Главная страница</div>;
+  return (
+    <>
+      {images && images?.length !== 0 && <FlexGallery images={images} />}
+      <div />
+    </>
+  );
 };
