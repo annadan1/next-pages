@@ -1,5 +1,7 @@
 const baseURL = process.env.MAIN_URL || 'http://localhost:3000';
 
+export const convertPath = (url: string) => `${baseURL}${url}`;
+
 export const api = {
   get: async(endpoint: string) => {
     const controller = new AbortController();

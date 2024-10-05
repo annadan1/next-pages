@@ -1,7 +1,7 @@
-import { type IImageData } from '@/shared/types';
+import { type IImage } from '@/shared/ui/image';
 import { api } from '.';
 
-export const getImages = async():Promise<IImageData[] | null> => {
+export const getImages = async():Promise<IImage[] | null> => {
   try {
     const res = await api.get('/images');
     if (res) {
