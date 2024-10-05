@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
 
+const isProduction = process.env.ENVIRONMENT === 'production';
+
 const nextConfig = {
   reactStrictMode: true,
+  output: 'export',
+  ...(isProduction
+    ? {
+        basePath: '/next-pages',
+      }
+    : {}),
   env: {
     MAIN_URL: process.env.MAIN_URL,
     DOMAIN: process.env.DOMAIN,
@@ -13,6 +21,7 @@ const nextConfig = {
     `,
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         hostname: process.env.DOMAIN,
